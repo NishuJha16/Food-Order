@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/content_main"
+    tools:context=".RestaurantMenuList">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F44437"
+        android:id="@+id/head">
+
+        <Button
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:onClick="allrest"
+            android:layout_weight="0.1"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/restname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:padding="10dp"
+            android:text="Pind Tadka"
+            android:textColor="#FFFFFF"
+            android:layout_weight="0.7"
+            android:textSize="24dp" />
+
+
+        <Button
+            android:layout_width="40sp"
+            android:id="@+id/share"
+            android:layout_weight="0.2"
+            android:layout_height="40sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_baseline_share_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/head"
+        android:background="#F8685D"
+        android:id="@+id/OffersAddress">
+
+        <Button
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:background="#F8685D"
+            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+            android:text="Gamharia,Jharkhand"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/offers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#FFEB3B"
+            android:padding="10dp"
+            android:text="30% off use code OFF30"
+            android:textColor="#F44336"
+            android:drawableStart="@drawable/ic_baseline_local_offer_24"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/OffersAddress"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_margin="5dp"
+        android:layout_above="@+id/addCart"/>
+    <Button
+        android:id="@+id/addCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Proceed to Cart"
+        android:background="#F44437"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
